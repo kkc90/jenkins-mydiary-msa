@@ -20,9 +20,7 @@ services:
    - --collation-server=utf8_general_ci 
  
  mydiary-back: 
-  build:
-   context: ./my-diary-back
-   dockerfile: Dockerfile 
+  image: leecloudo/mydiary-back:1.0
   container_name: rolling-server 
   restart: always 
   depends_on: 
@@ -38,9 +36,7 @@ services:
    - rolling-fe-be 
    
  mydiary-front: 
-  build:
-   context: ./my-diary-front
-   dockerfile: Dockerfile 
+  image: kkc90/mydiary-front:2.0
   container_name: rolling-front 
   restart: always 
   depends_on: 
